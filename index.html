@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lunnelle Dessert</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Quicksand:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+
+    <style>
+      .nav-item > a {
+        font-size: 12px;
+      }
+
+      .nav-item > .nav-link:hover,
+      .active {
+        color: rgb(228, 214, 214) !important;
+        border-bottom: 2px solid rgb(195, 226, 255);
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .bg-custom {
+        background-color: rgb(255, 255, 255);
+      }
+
+      .text-content h1 {
+        font-size: 3rem;
+        line-height: 1.12;
+        color: #315b85;
+      }
+
+      @media (max-width: 768px) {
+        .text-content h1 {
+          font-size: 2rem;
+        }
+      }
+      @keyframes floatMascot {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+
+        50% {
+          transform: translateY(-10px) rotate(1.5deg);
+        }
+      }
+      .btn-danger {
+        background-color: rgb(145, 188, 216);
+        border-color: rgb(133, 174, 207);
+      }
+      .btn-danger:hover {
+        background-color: aliceblue;
+        border-color: aliceblue;
+      }
+      
+      /* ===== TEMA PASTEL LUNNELLE ===== */
+
+      :root {
+        --blue-soft: #a9cce5;
+        --blue-light: #eaf5fc;
+        --blue-pastel: #d5eaf7;
+        --blue-dark: #527c9c;
+        --lavender: #e9e5f7;
+        --white: #ffffff;
+        --text-dark: #40566b;
+      }
+
+      /* ===== BODY ===== */
+
+      body {
+        background-color: #ffffff;
+        color: var(--text-dark);
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+
+      /* ===== JUDUL ===== */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      .font-display {
+        font-family: "Quicksand", sans-serif;
+        color: var(--blue-dark);
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+      }
+
+      /* ===== NAVBAR ===== */
+
+      .navbar {
+        background: rgba(255, 255, 255, 0.96);
+        padding: 12px 4%;
+        box-shadow: 0 4px 20px rgba(113, 157, 190, 0.12);
+        backdrop-filter: blur(12px);
+      }
+
+      .navbar-brand img {
+        transition: transform 0.3s ease;
+      }
+
+      .navbar-brand img:hover {
+        transform: scale(1.05);
+      }
+
+      .nav-item > a {
+        color: #60788d;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .nav-item > .nav-link:hover,
+      .nav-item > .active {
+        color: #719fc2 !important;
+        border-bottom: 2px solid #a9cce5;
+      }
+
+      .navbar-toggler {
+        border-color: #c5deef;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.2rem rgba(169, 204, 229, 0.3);
+      }
+
+      /* ===== TOMBOL ===== */
+
+      .btn {
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #a9cce5, #83b5d9);
+        border-color: #a9cce5;
+        color: #ffffff;
+        box-shadow: 0 5px 15px rgba(131, 181, 217, 0.2);
+      }
+
+      .btn-primary:hover {
+        background: #719fc2;
+        border-color: #719fc2;
+        color: #ffffff;
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background-color: #ffffff;
+        border-color: #d2e5f2;
+        color: #6489a8;
+      }
+
+      .btn-secondary:hover {
+        background-color: #eaf5fc;
+        border-color: #b5d4e9;
+        color: #527c9c;
+        transform: translateY(-2px);
+      }
+
+      .btn-danger {
+        background-color: #a9cce5;
+        border-color: #a9cce5;
+        color: #ffffff;
+      }
+
+      .btn-danger:hover {
+        background-color: #d5eaf7;
+        border-color: #d5eaf7;
+        color: #527c9c;
+      }
+
+      /* ===== HERO SECTION ===== */
+
+      .hero-section {
+        position: relative;
+        overflow: hidden;
+        padding: 6rem 0;
+        background: linear-gradient(
+          135deg,
+          #eaf5fc 0%,
+          #d5eaf7 55%,
+          #e9e5f7 100%
+        );
+      }
+
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        top: -100px;
+        left: -80px;
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 50%;
+      }
+
+      .hero-section::after {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        bottom: -100px;
+        right: 35%;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+      }
+
+      .hero-section h1 {
+        color: #527c9c;
+        font-size: 3.2rem;
+        line-height: 1.2;
+        font-weight: 700;
+      }
+
+      .hero-description {
+        color: #60788d !important;
+        font-size: 1rem;
+        line-height: 1.9;
+        max-width: 570px;
+      }
+
+      .hero-section .action {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 25px;
+      }
+
+      .hero-section .action .btn {
+        padding: 12px 25px;
+        border-radius: 12px;
+      }
+
+      /* ===== HERO IMAGE ===== */
+
+      .hero-image-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .hero-pod {
+        position: absolute;
+        inset: 1rem;
+        background: linear-gradient(145deg, #ffffff, #eaf5fc, #e9e5f7);
+        border-radius: 45% 45% 40% 40%;
+        box-shadow: 0 20px 50px rgba(105, 151, 185, 0.18);
+        border: 5px solid rgba(255, 255, 255, 0.85);
+        transform: rotate(3deg);
+      }
+
+      .animate-mascot {
+        animation: floatMascot 4.5s ease-in-out infinite;
+        filter: drop-shadow(0 12px 12px rgba(100, 140, 170, 0.15));
+      }
+
+      /* ===== TRUST BAR ===== */
+
+      .trust-bar {
+        padding: 2rem 0;
+        background: linear-gradient(90deg, #a9cce5, #c5def0, #d9eaf6);
+        border-top: 1px solid #d5eaf7;
+        border-bottom: 1px solid #d5eaf7;
+      }
+
+      .trust-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 15px;
+        background-color: #ffffff;
+        color: #83b5d9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 1.3rem;
+        box-shadow: 0 5px 15px rgba(82, 124, 156, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .trust-icon:hover {
+        transform: translateY(-4px);
+        background-color: #f4f9fd;
+      }
+
+      .trust-bar h4 {
+        color: #456783;
+      }
+
+      .trust-bar p {
+        color: #ffffff !important;
+      }
+
+      /* ===== KATEGORI ===== */
+
+      #kategori {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+        background: linear-gradient(180deg, #ffffff, #f4f9fd);
+      }
+
+      #kategori .text-primary {
+        color: #83b5d9 !important;
+        letter-spacing: 2px !important;
+      }
+
+      #kategori h2 {
+        color: #527c9c;
+        margin-bottom: 2rem;
+      }
+
+      .kategori-card {
+        height: 100%;
+        padding: 30px 18px;
+        text-align: center;
+        background: #ffffff;
+        border: 1px solid #e2eff8;
+        border-radius: 22px;
+        box-shadow: 0 8px 25px rgba(113, 157, 190, 0.08);
+        transition: all 0.3s ease;
+      }
+
+      .kategori-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(113, 157, 190, 0.18);
+        border-color: #b9d9ed;
+        background: #fbfdff;
+      }
+
+      .kategori-icon {
+        width: 85px;
+        height: 85px;
+        margin: 0 auto 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #eaf5fc, #e9e5f7);
+        border-radius: 25px;
+        transition: all 0.3s ease;
+      }
+
+      .kategori-card:hover .kategori-icon {
+        transform: scale(1.08) rotate(-3deg);
+      }
+
+      .kategori-icon img {
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+
+      .kategori-card h3 {
+        color: #527c9c;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .kategori-card p {
+        color: #8194a5 !important;
+        font-size: 0.82rem;
+        line-height: 1.7;
+      }
+
+      /* ===== RESPONSIVE ===== */
+
+      @media (max-width: 768px) {
+        .hero-section {
+          padding: 4rem 0;
+        }
+
+        .hero-section h1 {
+          font-size: 2rem;
+        }
+
+        .hero-description {
+          font-size: 0.9rem;
+        }
+
+        .hero-section .action {
+          justify-content: center;
+        }
+
+        .hero-image-wrapper {
+          margin-top: 30px;
+        }
+
+        .trust-bar {
+          padding: 1.5rem 0;
+        }
+
+        .trust-icon {
+          width: 38px;
+          height: 38px;
+          font-size: 1.1rem;
+        }
+
+        .trust-bar h4 {
+          font-size: 0.8rem;
+        }
+
+        .trust-bar p {
+          font-size: 0.7rem !important;
+        }
+
+        .kategori-card {
+          padding: 22px 12px;
+          border-radius: 18px;
+        }
+
+        .kategori-icon {
+          width: 70px;
+          height: 70px;
+        }
+
+        #kategori h2 {
+          font-size: 1.8rem;
+        }
+      }
+
+      /* ==================== BEST SELLER ==================== */
+      .bestseller-section {
+        padding: 4rem 0;
+        background-color: #ffffff;
+        border-top: 1px solid #d5eaf7;
+        border-bottom: 1px solid #d5eaf7;
+      }
+
+      .product-card {
+        background-color: #f4f9fd;
+        border: 1px solid #d5eaf7;
+        border-radius: 30px;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        transition: all 0.3s ease;
+      }
+
+      .product-card:hover {
+        box-shadow: 0 14px 28px -6px rgba(113, 157, 190, 0.18);
+      }
+
+      .product-img-wrap {
+        position: relative;
+        height: 220px;
+        background-color: #eaf5fc;
+        border: 1px solid #d5eaf7;
+        border-radius: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .product-img-wrap.choco {
+        background-color: #e9e5f7;
+      }
+
+      .product-tag {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 0.25rem 0.75rem;
+        border-radius: 99px;
+        font-size: 11px;
+        font-weight: 700;
+        color: #527c9c;
+        border: 1px solid #d5eaf7;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .product-tag.green {
+        color: #648b7a;
+      }
+
+      .product-tag .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #83b5d9;
+      }
+
+      .product-tag.green .dot {
+        background-color: #91bca8;
+      }
+
+      .product-icon {
+        width: 200px;
+        height: 200px;
+        transition: transform 0.3s ease;
+      }
+
+      .product-card:hover .product-icon {
+        transform: scale(1.05);
+      }
+
+      .product-footer {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(213, 234, 247, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      /*=======TENTANG=======*/
+      .tentang-section {
+        padding: 4rem 0;
+      }
+      .tentang-card {
+        background-color: #EAF6FF;
+        border: 1px solid #f2ced6;
+        border-radius: 36px;
+        padding: 3rem 2rem;
+        box-shadow: 0 14px 28px -6px rgba(216, 67, 96, 0.12);
+      }
+      .mascot-bedge-circle {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+
+      /* ==================== TESTIMONI ==================== */
+
+      .testimoni-section {
+        padding: 4rem 0;
+        background-color: #fff;
+        border-top: 1px solid #F2CED6;
+        border-bottom: 1px solid #F2CED6;
+      }
+
+      .testi-card {
+        background-color: #EAF6FF;
+        border: 1px solid #F2CED6;
+        border-radius: 24px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      .testi-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        background-color: #527FA5
+        color #527FA5;
+      }
+
+      .testi-avatar.cream {
+        background-color: #FFF8F0;
+        color: #2C1A1D;
+      }
+    </style>
+  </head>
+  <body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg bg-custom sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="GAMBAR/LUNNELLE DESSERT.png" alt="Lunnelle" width="80" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Kategori</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">Menu Favorit</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">Tentang</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">Testimoni</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav gap-2">
+            <li class="nav-item">
+              <a href="#" class="btn btn-light position-relative rounded-pill">
+                <i class="bi bi-cart3"></i>
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                >
+                  9999+
+                  <span class="visually-hidden">Keranjang Kosong</span>
+                </span>
+              </a>
+              <a href="#" class="fw-bold btn btn-primary">Pesan Sekarang</a>
+            </li>
+            <li class="nav-item"></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--MAIN CONTENT-->
+    <main id="main-content">
+      <!--HERO SECTION-->
+      <section class="hero-section" id="home">
+        <div class="container position-relative" style="z-index: 1">
+          <div class="row align-items-center">
+            <div class="col-lg-7 text-content text-center text-lg-start">
+              <h1 class="mb-3"></h1>
+
+              <p
+                class="text-secondary mb-4 mx-auto mx-lg-0"
+                style="max-width: 36rem; color: rgb(255, 242, 242) !important"
+              ></p>
+
+              <h1>
+                <span class>
+                  Temukan Kelezatan Favoritmu Di Lunnelle Dessert</span
+                >
+              </h1>
+
+              <p class="hero-description text-black">
+                Nikmati berbagai dessert lezat dengan rasa manis yang pas,
+                tekstur lembut, dan tampilan yang menggoda. Temukan dessert
+                favoritmu dan buat setiap momen menjadi lebih manis bersama
+                Lunnelle.
+              </p>
+
+              <div class="action">
+                <a href="#" class="btn btn-primary">Lihat Menu</a>
+                <a href="#" class="btn btn-secondary">Pesan Sekarang</a>
+              </div>
+            </div>
+            <div class="col-lg-5 text-center">
+              <div class="hero-image-wrapper">
+                <div class="hero-pod"></div>
+                <img
+                  src="GAMBAR/remove.png"
+                  alt="Maskot Lunnelle"
+                  class="img-fluid position-relative animate-mascot"
+                  style="z-index: 1; max-width: 380px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="trust-bar">
+        <div class="container">
+          <div class="row g-4 text-center">
+            <div class="col-6 col-lg-3">
+              <div
+                class="d-flex align-items-center justify-content-center gap-3"
+              >
+                <div class="trust-icon">
+                  <i class="bi bi-stars"></i>
+                </div>
+                <div class="text-start">
+                  <h4 class="h6 mb-0 fw-bold">Dessert Berkualitas</h4>
+                  <p class="small text-white mb-0">
+                    Dibuat dengan bahan pilihan.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <div
+                class="d-flex align-items-center justify-content-center gap-3"
+              >
+                <div class="trust-icon">
+                  <i class="bi bi-emoji-smile"></i>
+                </div>
+                <div class="text-start">
+                  <h4 class="h6 mb-0 fw-bold">Rasa Istimewa</h4>
+                  <p class="small text-white mb-0">
+                    Manis pas dan tekstur lembut.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <div
+                class="d-flex align-items-center justify-content-center gap-3"
+              >
+                <div class="trust-icon">
+                  <i class="bi bi-gift"></i>
+                </div>
+                <div class="text-start">
+                  <h4 class="h6 mb-0 fw-bold">Kemasan Cantik</h4>
+                  <p class="small text-white mb-0">
+                    Rapi dan cocok untuk hadiah.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6 col-lg-3">
+              <div
+                class="d-flex align-items-center justify-content-center gap-3"
+              >
+                <div class="trust-icon">
+                  <i class="bi bi-bag-heart"></i>
+                </div>
+                <div class="text-start">
+                  <h4 class="h6 mb-0 fw-bold">Pesan dengan Mudah</h4>
+                  <p class="small text-white mb-0">
+                    Temukan dessert favoritmu.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--KATEGORI CONTENT-->
+      <section id="kategori" class="py-5">
+        <div class="container text-center">
+          <span
+            class="text-primary fw-bold text-uppercase small"
+            style="letter-spacing: 0.05em"
+            >Kategori</span
+          >
+          <h2 class="mt-1">Pilih Dessert Manismu</h2>
+
+          <div class="row g-4">
+            <div class="col-6 col-md-3">
+              <div class="kategori-card">
+                <div class="kategori-icon">
+                  <img
+                    src="GAMBAR/icon/cupcake.svg"
+                    alt=""
+                    width="50"
+                    height="50"
+                  />
+                </div>
+                <h3 class="h6 mb-1">Aneka Kue</h3>
+                <p class="small text-secondary mb-0">
+                  Beragam Pilihan Kue Untuk Momen Manis
+                </p>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="kategori-card">
+                <div class="kategori-icon">
+                  <img
+                    src="GAMBAR/icon/croissant.svg"
+                    alt=""
+                    width="50"
+                    height="50"
+                  />
+                </div>
+                <h3 class="h6 mb-1">Pastry Lezat</h3>
+                <p class="small text-secondary mb-0">
+                  Pilihan Pastry Untuk Menemani Waktu Santai
+                </p>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="kategori-card">
+                <div class="kategori-icon">
+                  <img
+                    src="GAMBAR/icon/pie.svg"
+                    alt=""
+                    width="50"
+                    height="50"
+                  />
+                </div>
+                <h3 class="h6 mb-1">Dessert Manis</h3>
+                <p class="small text-secondary mb-0">
+                  Hidangan Penutup Untuk Menambah Kebahagiaan
+                </p>
+              </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+              <div class="kategori-card">
+                <div class="kategori-icon">
+                  <img
+                    src="GAMBAR/icon/ice.svg"
+                    alt=""
+                    width="50"
+                    height="50"
+                  />
+                </div>
+                <h3 class="h6 mb-1">Es Krim</h3>
+                <p class="small text-secondary mb-0">
+                  Sajian Es Krim Untuk Menikmati Kesegaran
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=====BEST SELLER=====-->
+      <section id="bestseller" class="bestseller-section">
+        <div class="container text-center">
+          <div
+            class="d-flex flex-column flex-md-row align-items-md-end justify-content-between mb-5"
+          >
+            <div>
+              <span
+                class="text-with fw-bold text-uppercase small"
+                style="letter-spacing: 0.05em"
+                >Koleksi Dessert Favorit</span
+              >
+              <h2 class="mt-1">LUNNELLE SWEET COLLECTION</h2>
+            </div>
+            <p
+              class="text-secondary small mb-0 mt-2 mt-md-0"
+              style="max-width: 24rem"
+            >
+              Nikmati aneka dessert dengan pilihan rasa manis yang cocok untuk
+              menemani setiap momen
+            </p>
+          </div>
+
+          <div class="row g-4">
+            <!-- card 1 -->
+            <div class="col-md-6 col-lg-4">
+              <article class="product-card">
+                <div>
+                  <div class="product-img-wrap">
+                    <div class="product-tag">
+                      <span class="dot"></span>
+                      <span>Lunnelle Best Seller</span>
+                    </div>
+                    <img
+                      src="GAMBAR/strawberry cheesecake cup.jpeg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="mt-3">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <span
+                        class="small fw-semibold text-secondary text-uppercase"
+                        style="letter-spacing: 0.05em"
+                        >DESSERT CUP</span
+                      >
+                      <span class="small fw-bold text-warning"
+                        ><i class="bi bi-star-fill"></i> 4.9 (184)</span
+                      >
+                    </div>
+                    <h3 class="h5 mt-2 mb-1">Strawberry Cheesecake Cup</h3>
+                    <p class="small text-secondary mb-0">
+                      Cheesecake lembut dengan perpaduan krim keju dan stroberi
+                      manis yang cocok menemani momen spesialmu.
+                    </p>
+                  </div>
+                </div>
+                <div class="product-footer">
+                  <div>
+                    <span
+                      class="d-block"
+                      style="font-size: 11px; color: #73575c"
+                      >Harga Paket + Maskot</span
+                    >
+                    <span class="font-display fw-bold fs-5">Rp 45.000</span>
+                  </div>
+                  <button
+                    onclick="handleAddToCart('Strawberry Cheesecake Cup', 45000)"
+                    class="btn btn-danger btn-sm fw-bold rounded-3 d-inline-flex align-items-center gap-2"
+                  >
+                    <i class="bi bi-plus-lg"></i> Pesan
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4">
+              <article class="product-card">
+                <div>
+                  <div class="product-img-wrap">
+                    <div class="product-tag">
+                      <span class="dot"></span>
+                      <span>Lunnelle Best Seller</span>
+                    </div>
+                    <img
+                      src="GAMBAR/strawberry croissant.jpeg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="mt-3">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <span
+                        class="small fw-semibold text-secondary text-uppercase"
+                        style="letter-spacing: 0.05em"
+                        >SWEET PASTRY</span
+                      >
+                      <span class="small fw-bold text-warning"
+                        ><i class="bi bi-star-fill"></i> 4.9 (187)</span
+                      >
+                    </div>
+                    <h3 class="h5 mt-2 mb-1">Strawberry Croissant</h3>
+                    <p class="small text-secondary mb-0">
+                      Croissant renyah dengan isian krim lembut dan stroberi
+                      segar yang manis.
+                    </p>
+                  </div>
+                </div>
+                <div class="product-footer">
+                  <div>
+                    <span
+                      class="d-block"
+                      style="font-size: 11px; color: #73575c"
+                      >Harga Paket + Maskot</span
+                    >
+                    <span class="font-display fw-bold fs-5">Rp 55.000</span>
+                  </div>
+                  <button
+                    onclick="handleAddToCart('Strawberry Croissant', 55000)"
+                    class="btn btn-danger btn-sm fw-bold rounded-3 d-inline-flex align-items-center gap-2"
+                  >
+                    <i class="bi bi-plus-lg"></i> Pesan
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4">
+              <article class="product-card">
+                <div>
+                  <div class="product-img-wrap">
+                    <div class="product-tag">
+                      <span class="dot"></span>
+                      <span>Lunnelle Best Seller</span>
+                    </div>
+                    <img
+                      src="GAMBAR/choco sunday.jpeg"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="mt-3">
+                    <div
+                      class="d-flex align-items-center justify-content-between"
+                    >
+                      <span
+                        class="small fw-semibold text-secondary text-uppercase"
+                        style="letter-spacing: 0.05em"
+                        >ICE CREAM SUNDAY</span
+                      >
+                      <span class="small fw-bold text-warning"
+                        ><i class="bi bi-star-fill"></i> 4.9 (192)</span
+                      >
+                    </div>
+                    <h3 class="h5 mt-2 mb-1">Choco Sundae</h3>
+                    <p class="small text-secondary mb-0">
+                      Es krim cokelat lembut dengan siraman saus cokelat dan
+                      topping manis.
+                    </p>
+                  </div>
+                </div>
+                <div class="product-footer">
+                  <div>
+                    <span
+                      class="d-block"
+                      style="font-size: 11px; color: #73575c"
+                      >Harga Paket + Maskot</span
+                    >
+                    <span class="font-display fw-bold fs-5">Rp 30.000</span>
+                  </div>
+                  <button
+                    onclick="handleAddToCart('Choco Sunday', 30000)"
+                    class="btn btn-danger btn-sm fw-bold rounded-3 d-inline-flex align-items-center gap-2"
+                  >
+                    <i class="bi bi-plus-lg"></i> Pesan
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=====TENTANG=====-->
+      <section id="tentang" class="tentang-section">
+        <div class="container">
+          <div class="tentang-card">
+            <div class="row g-5 align-items-center">
+              <div class="col-lg-5 text-center">
+                <div class="mascot-badge-circle">
+                  <img src="GAMBAR/CHIBI2.png" alt="" class="img-fluid" />
+                </div>
+                <h3 class="h5 mt-4">Lunnella Dessert</h3>
+                <p class="small text-secondary mb-0">
+                  Teman manis yang menemani setiap momen bersama lunnella
+                </p>
+              </div>
+
+              <div class="col-lg-7">
+                <span
+                  class="fw-bold text-uppercase small"
+                  style="letter-spacing: 0.05em; color: #8BB9D8;"
+                  >Tentang Lunnella</span
+                >
+                <h2 class="mt-2" style="color: #527FA5;">Mengenal Lunnella Dessert</h2>
+                <p class="text-secondary">
+                  Lunnella Dessert menghadirkan beragan pilihan
+                  kue, pastry, dessert, dan es krim yang cocok untuk menemani
+                  berbagai momen manis. Temukan hidangan favoritmu dan nikmati
+                  kelezatan setiap gigitan bersama Lunnella.
+                </p>
+                <div class="row g-3 pt-2">
+                  <div class="col-sm-6">
+                    <div
+                      class="bg-white rounded-3 border p-3 small fw-semibold d-flex align-items-center gap-2"
+                      style="border-color: #D6E8F5 !important"
+                    >
+                      <span
+                        class="d-inline-block rounded-circle bg-danger"
+                        style="width: 8px; height: 8px"
+                      ></span>
+                      Aneka Kue Dan Pastry
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div
+                      class="bg-white rounded-3 border p-3 small fw-semibold d-flex align-items-center gap-2"
+                      style="border-color: #F2DCE7 !important"
+                    >
+                      <span
+                        class="d-inline-block rounded-circle bg-danger"
+                        style="width: 8px; height: 8px"
+                      ></span>
+                      Dessert Manis Dan Es Krim
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=====TESTIMONI=====-->
+      <section id="testimoni" class="testimoni-section">
+        <div class="container">
+          <div class="text-center mx-auto mb-5" style="max-width: 36rem;">
+          <span class="fw-bold text-uppercase small" style="letter-spacing: .05em; color:#8BB9D8;">Komentar Mereka</span>
+            <h2 class="mt-1">Ulasan Pelanggan Setia</h2>
+          </div>
+
+          <div class="carousel slide" id="carouselExampleSlideOnly" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+              <!--SLIDE 1-->
+              <div class="carousel-item active" style="color: black !important; border: none !important;">
+                <div class="row g-4">
+                  <div class="col-md-4">
+                    <div class="testi-card">
+                    <div>
+                    <div class="text-warning mb-2">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="small mb-0" style="color: #527FA5;">Dessert nya enak dan tampilannya lucu banget! Cocok buat teman santai. Pengen coba menu lainnya</p>
+                  </div>
+                    <div class="d-flex align-items-center gap-3 mt-4 pt-3 border-top">
+                      <img src="GAMBAR/bws.jpeg" alt="Byeon Woo Seok" class="testi-avatar">
+                      <div>
+                        <h4 class="h6 mb-0">Byeon Woo Seok</h4>
+                        <span class="small text-secondary">Seoul</span>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+      
+                  <div class="col-md-4">
+                    <div class="testi-card">
+                    <div>
+                    <div class="text-warning mb-2">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="small mb-0" style="color: #527FA5;">Strawberry Croissant nya menarik banget, perpaduan rasa manis dan stroberinya bikin penasaran untuk pesan lagi</p>
+                  </div>
+                    <div class="d-flex align-items-center gap-3 mt-4 pt-3 border-top">
+                      <img src="GAMBAR/Chen Zheyuan.jpeg" alt="" class="testi-avatar">
+                      <div>
+                        <h4 class="h6 mb-0">Chen Zhe Yuan</h4>
+                        <span class="small text-secondary">Shanghai</span>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+      
+                  <div class="col-md-4">
+                    <div class="testi-card">
+                    <div>
+                    <div class="text-warning mb-2">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="small mb-0" style="color: #527FA5;">Choco Sundae nya keliatan menggoda dan cocok banget dinikmati saat ingin yang manis manis</p>
+                  </div>
+                    <div class="d-flex align-items-center gap-3 mt-4 pt-3 border-top">
+                      <img src="GAMBAR/park solomon.jpeg" alt="" class="testi-avatar">
+                      <div>
+                        <h4 class="h6 mb-0">Park Solomon</h4>
+                        <span class="small text-secondary">Jeju</span>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+      
+                  </div>
+              </div>
+              <!--SLIDE 2-->
+              <div class="carousel-item" style="color: black !important; border: none !important;">
+                <div class="row g-4">
+                  <div class="col-md-4">
+                    <div class="testi-card">
+                    <div>
+                    <div class="text-warning mb-2">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="small mb-0" style="color: #527FA5;">Dessert nya enak banget dan rasanya pas! Packaging nya juga rapi dan cantik, jadi makin suka.</p>
+                  </div>
+                    <div class="d-flex align-items-center gap-3 mt-4 pt-3 border-top">
+                      <img src="GAMBAR/ahn hyoseop.jpeg" alt="" class="testi-avatar">
+                      <div>
+                        <h4 class="h6 mb-0">Ahn Hyeoseop</h4>
+                        <span class="small text-secondary">Busan</span>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+      
+                  <div class="col-md-4">
+                    <div class="testi-card">
+                    <div>
+                    <div class="text-warning mb-2">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="small mb-0" style="color: #527FA5;">Aku suka banget sama tekstur dan rasanya. Manisnya pas, cocok buat ngemil sambil santai.</p>
+                  </div>
+                    <div class="d-flex align-items-center gap-3 mt-4 pt-3 border-top">
+                      <img src="GAMBAR/cha eunwo.jpeg" alt="" class="testi-avatar">
+                      <div>
+                        <h4 class="h6 mb-0">Cha Eunwoo</h4>
+                        <span class="small text-secondary">Incheon</span>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+      
+                  <div class="col-md-4">
+                    <div class="testi-card">
+                    <div>
+                    <div class="text-warning mb-2">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="small mb-0" style="color: #527FA5;">Pelayanannya ramah dan dessert nya sesuai ekspektasi. Pasti bakal pesan lagi kalau lagi pengen yang manis manis</p>
+                  </div>
+                    <div class="d-flex align-items-center gap-3 mt-4 pt-3 border-top">
+                      <img src="GAMBAR/choi hyun wook.jpeg" alt="" class="testi-avatar">
+                      <div>
+                        <h4 class="h6 mb-0">Choi Hyunwook</h4>
+                        <span class="small text-secondary">Daejeon</span>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+      
+                  </div>
+                </div>
+            </div>
+          </div>
+          </div>
+      </section>
+    </main>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
